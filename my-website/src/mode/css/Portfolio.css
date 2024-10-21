@@ -1,0 +1,19 @@
+.portfolio {
+    padding: 40px;
+  }
+  
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .portfolio-item {
+    width: calc(33.33% - 20px);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  

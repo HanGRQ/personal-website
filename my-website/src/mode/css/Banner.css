@@ -1,0 +1,21 @@
+.banner {
+    background: url('../images/banner.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .banner-content {
+    display: none;
+  }
+  
+  .banner-content.open {
+    display: block;
+  }
+  
+  .banner-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  

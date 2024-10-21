@@ -1,0 +1,15 @@
+.experience {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+  }
+  
+  .experience-item h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .experience-item p {
+    font-size: 18px;
+  }
+  

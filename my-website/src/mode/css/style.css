@@ -1,12 +1,10 @@
 /* fonts family */
-
 :root {
     --body-font : "Work Sans", sans-serif;
     --bs-btn-font-family : "Work Sans", sans-serif;
 }
 
 /* fonts color */
-
 :root {
     --bs-blue: #4BA1A7;
     --bs-red: #F0756C;
@@ -47,6 +45,31 @@ body , body  [data-bs-theme=light] {
     --bs-info: #C3C3C3;
 }
 
+/* 全局字体大小使用 rem，确保适应不同设备 */
+body {
+    font-family: var(--body-font);
+    font-size: 1rem; /* 基础字体大小 */
+}
+
+/* container 宽度自适应 */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* 按钮样式 */
 .btn-primary {
     --bs-btn-color: var(--bs-black);
     --bs-btn-bg: var(--bs-orange);
@@ -55,39 +78,41 @@ body , body  [data-bs-theme=light] {
     --bs-btn-hover-bg: var(--bs-black);
     --bs-btn-hover-border-color: var(--bs-black);
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-bg: var(--bs-black); 
+    --bs-btn-active-bg: var(--bs-black);
 }
 
-.pagination {
-    --bs-pagination-padding-x: 0.75rem;
-    --bs-pagination-padding-y: 0.375rem;
-    --bs-pagination-font-size: 1rem;
-    --bs-pagination-color: var(--bs-link-color);
-    --bs-pagination-bg: var(--bs-body-bg);
-    --bs-pagination-border-width: var(--bs-border-width);
-    --bs-pagination-border-color: var(--bs-border-color);
-    --bs-pagination-border-radius: var(--bs-border-radius);
-    --bs-pagination-hover-color: var(--bs-link-hover-color);
-    --bs-pagination-hover-bg: var(--bs-black);
-    --bs-pagination-hover-border-color: var(--bs-border-color);
-    --bs-pagination-focus-color: var(--bs-link-hover-color);
-    --bs-pagination-focus-bg: var(--bs-secondary-bg);
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    --bs-pagination-active-color: var(--bs-black);
-    --bs-pagination-active-bg: #F5E9E9;
-    --bs-pagination-active-border-color: #F5E9E9;
-    --bs-pagination-disabled-color: var(--bs-secondary-color);
-    --bs-pagination-disabled-bg: var(--bs-secondary-bg);
-    --bs-pagination-disabled-border-color: var(--bs-border-color);
-    display: flex;
-    padding-left: 0;
-    list-style: none;
+@media (max-width: 767px) {
+    .btn-primary {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
 }
 
-.bg-gray {
-    background-color: var(--bs-gray) !important;
+@media (min-width: 1200px) {
+    .btn-primary {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
 }
 
+/* 标题和文字大小使用相对单位 */
+h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.display-1 {
+    font-size: calc(4.375rem + 4.5vw); /* 动态调整字体大小 */
+    font-weight: 900;
+    line-height: 80%;
+}
+
+@media (max-width: 767px) {
+    .display-1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* 调整背景颜色 */
 .bg-yellow {
     background-color: var(--bs-yellow) !important;
 }
@@ -100,150 +125,60 @@ body , body  [data-bs-theme=light] {
     background-color: var(--bs-teal) !important;
 }
 
-.navbar-nav a.nav-link:hover {
-    color: var(--bs-primary) !important;
-}
-
-body {
-    font-family: var(--body-font);
-}
-
-/* font size */
-h2,h3,h4,h5,h6 {
-    font-weight: 700;
-}
-.display-1 {
-    font-size: calc(4.375rem + 4.5vw);
-    font-weight: 900 ;
-    font-family: var(--body-font); 
-    line-height: 80%;
-}
-.display-2,
-.display-3,
-.display-4,
-.display-5 {
-    font-weight: 700 ;
-}
-.p-6 {
-    padding: 4rem !important;
-}
-
-/* navbar */
-.navbar svg {
-    color: #111111;
-}
-
-/* banner color */
-
-.banner {
-    color: var(--bs-black);
-}
-
-/* line height */
-
-p.a {
-    line-height: 10%;
-}
-
-.lh-small {
-    line-height: 80%;
-}
-
-.ls-4 {
-    letter-spacing: 0.2rem;
-}
-
-/* masonry */
-.btn.is-checked {
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
-}
-/* paragraph color */
-.postf {
-    color: var(--bs-gray);
-}
-
-.postg {
-    color: var(--bs-info);
-}
-
-/* width of container */
-
-@media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1460px;
-    }
-}
-
-/* testimonial */
-
+/* testimonial 卡片自适应布局 */
 .testimonial-card {
-  background: var(--bs-black);
-  color: var(--bs-white);
+    background: var(--bs-black);
+    color: var(--bs-white);
 }
 
 .testimonial-card .postd {
     color: var(--bs-red);
 }
 
-
-
-/* 3.5 FAQs
-/*----------------------------------------------*/
-.accordion-item{
-    background: var(--bs-yellow);
-  }
-  h5 button.accordion-button{
-    font-family: var(--body-font);
-    background: var(--bs-yellow);
-  }
-  .accordion-button:focus {
-    border: none;
-    outline: 0;
-    box-shadow: none;
-  }
-  .accordion-button:not(.collapsed) {
-    background: none;
-    box-shadow: none;
-  }
-
-  .accordion-button::after{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z'/%3E%3C/svg%3E");
-  }
-  .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z'/%3E%3C/svg%3E");
-    transform: rotate(180deg);
-  }
-
-
-/* styles page */
-/* 
-a {
-    color: rgba(var(--bs-black), var(--bs-link-opacity, 1));
-    text-decoration: none;
+@media (max-width: 767px) {
+    .testimonial-card {
+        padding: 15px;
+    }
 }
 
-a:hover {
-    --bs-black: var(--bs-link-hover-color-rgb);
-} */
-
-/* blog */
-
-.page-link {
-    color: var(--bs-black);
+@media (min-width: 1200px) {
+    .testimonial-card {
+        padding: 30px;
+    }
 }
 
-.page-link:hover {
-    z-index: 2;
-    color: var(--bs-pagination-hover-color);
-    background-color: var(--bs-pagination-hover-bg);
-    border-color: var(--bs-pagination-hover-border-color);
+/* Masonry 布局按钮组 */
+.button-group .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
 }
 
-.active>.page-link, .page-link.active {
-    z-index: 3;
-    color: var(--bs-pagination-active-color);
-    background-color: var(--bs-pagination-active-bg);
-    border-color: var(--bs-pagination-active-border-color);
+@media (max-width: 767px) {
+    .button-group .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-group .btn {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}
+
+/* grid 项目自适应布局 */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    flex: 1 1 33%; /* 大屏幕默认3列 */
+}
+
+@media (max-width: 767px) {
+    .grid-item {
+        flex: 1 1 100%; /* 小屏幕下占满一行 */
+    }
 }
