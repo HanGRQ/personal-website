@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Footer from './components/Footer';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    axios.get('http://localhost:5000/')
-      .then(response => setMessage(response.data))
-      .catch(error => console.error('Error:', error));
-  }, []);
-
   return (
     <div>
-      <h1>{message}</h1>
+      <Header />
+      <Banner />
+      {/* Add other sections like Testimonials, Portfolio, etc. */}
+      <Footer />
     </div>
   );
 }

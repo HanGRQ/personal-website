@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './mode/css/style.css';  // 引入主样式
+import './mode/css/lightbox.min.css';  // 引入 Lightbox 的样式
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
